@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="?android:attr/actionBarSize"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        android:id="@+id/displayPic"
+        />
+    <TextView
+        android:id="@+id/Account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayPic"
+        android:text="Firstname Lastname"
+        android:textSize="27sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/account_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age : X"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_below="@id/Account_name"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_req"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_below="@id/account_age"
+        android:text="Requests Status: X"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/account_location"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_below="@id/account_req"
+        android:text="Location : X"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/signout"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#fff"
+        android:layout_margin="20dp"
+        android:text="Sign out"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

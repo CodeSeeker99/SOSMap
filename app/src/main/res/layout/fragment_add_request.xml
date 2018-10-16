@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?android:attr/actionBarSize"
+    tools:context=".AddRequestFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/LL1"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_location_on_black_24dp"
+            android:background="#fff"
+            android:layout_width="100dp"
+            android:layout_margin="10dp"
+            android:id="@+id/Location_button"
+            android:layout_height="100dp"
+            />
+
+        <ImageView
+            android:src="@drawable/ic_add_a_photo_black_24dp"
+            android:background="#fff"
+            android:layout_width="100dp"
+            android:layout_margin="10dp"
+            android:id="@+id/Photo_button"
+            android:layout_toRightOf="@id/Location_button"
+            android:layout_height="100dp"
+            />
+    </LinearLayout>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/ReqTyp"
+       android:layout_below="@id/LL1"
+       android:text="Request Type - "
+       android:layout_margin="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:background="#e74c3c"
+        android:layout_alignParentBottom="true"
+        android:text="SOS Request"/>
+
+
+</RelativeLayout>
