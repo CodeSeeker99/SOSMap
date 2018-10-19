@@ -35,22 +35,46 @@
             />
     </LinearLayout>
 
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/ReqTyp"
-       android:layout_below="@id/LL1"
-       android:text="Request Type - "
-       android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/ReqTyp"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LL1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Request Type - " />
 
     <Button
+        android:id="@+id/SubmitRequestButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textColor="#fff"
-        android:background="#e74c3c"
         android:layout_alignParentBottom="true"
-        android:text="SOS Request"/>
+        android:layout_margin="10dp"
+        android:background="#e74c3c"
+        android:text="SOS Request"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="72dp"
+        android:text="Location:" />
+
+    <Button
+        android:id="@+id/buttonLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="161dp"
+        android:text="SetLocation" />
 
 
 </RelativeLayout>
