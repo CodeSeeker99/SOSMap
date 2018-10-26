@@ -5,18 +5,23 @@ import android.location.Location;
 import java.util.ArrayList;
 
 public class Request {
+    private String id;
     private String name;
+    private String phone;
     private boolean isFullfilled;
     private Location location;
     private ArrayList<String> imgURL;
-    private ArrayList<String> requestType;
+    private String requestType;
     private String desc;
 
-    public Request(String name, boolean isFullfilled, ArrayList<String> requestType, String desc) {
-        this.name = name;
-        this.isFullfilled = isFullfilled;
-        this.requestType = requestType;
-        this.desc = desc;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -51,11 +56,11 @@ public class Request {
         this.imgURL = imgURL;
     }
 
-    public ArrayList<String> getRequestType() {
+    public String getRequestType() {
         return requestType;
     }
 
-    public void setRequestType(ArrayList<String> requestType) {
+    public void setRequestType(String requestType) {
         this.requestType = requestType;
     }
 

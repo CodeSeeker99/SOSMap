@@ -7,46 +7,83 @@
     android:layout_marginBottom="?android:attr/actionBarSize"
     tools:context=".AddRequestFragment">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:id="@+id/LL1"
-        android:orientation="horizontal"
-        android:padding="20dp"
+    <ImageView
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        android:background="#fff"
+        android:layout_width="100dp"
+        android:layout_margin="10dp"
         android:layout_centerHorizontal="true"
+        android:id="@+id/Photo_button"
+        android:layout_height="100dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ReqTyp"
+        android:layout_below="@id/Photo_button"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:src="@drawable/ic_location_on_black_24dp"
-            android:background="#fff"
-            android:layout_width="100dp"
-            android:layout_margin="10dp"
-            android:id="@+id/Location_button"
-            android:layout_height="100dp"
-            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Requests : " />
 
-        <ImageView
-            android:src="@drawable/ic_add_a_photo_black_24dp"
-            android:background="#fff"
-            android:layout_width="100dp"
-            android:layout_margin="10dp"
-            android:id="@+id/Photo_button"
-            android:layout_toRightOf="@id/Location_button"
-            android:layout_height="100dp"
-            />
+        <Spinner
+            android:id="@+id/Spinner"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+
     </LinearLayout>
 
     <TextView
-        android:id="@+id/ReqTyp"
-        android:layout_width="108dp"
+        android:id="@+id/ReqList"
+        android:layout_below="@id/ReqTyp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL1"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Request Type - " />
+        android:textSize="18sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/LocationParam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_below="@id/ReqList"
+        android:layout_marginStart="20dp"
+        android:text="Location :" />
+
+    <ImageView
+        android:src="@drawable/ic_location_on_black_24dp"
+        android:background="#fff"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@id/LocationParam"
+        android:layout_below="@id/ReqList"
+        android:id="@+id/Location_button"
+        />
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_toEndOf="@id/Location_button"
+        android:layout_below="@id/ReqList"
+        android:text="Location unavailabe!"
+        android:padding="5dp"/>
+
 
     <Button
         android:id="@+id/SubmitRequestButton"
@@ -58,23 +95,46 @@
         android:text="SOS Request"
         android:textColor="#fff" />
 
-    <TextView
-        android:id="@+id/textViewLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="72dp"
-        android:text="Location:" />
+
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/textViewLocation"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginStart="20dp"
+            android:paddingTop="10dp"
+            android:text="Description :"/>
+
+        <EditText
+            android:id="@+id/Desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:hint="Add a description"
+            android:layout_marginEnd="10dp"
+            android:inputType="textMultiLine"
+            android:background="@android:color/transparent"
+            android:maxLines="5"
+            />
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/buttonLocation"
+        android:id="@+id/clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:text="Clear"
+        android:layout_below="@id/LL2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="161dp"
-        android:text="SetLocation" />
+        android:layout_marginTop="20dp"
+        />
+
 
 
 </RelativeLayout>
